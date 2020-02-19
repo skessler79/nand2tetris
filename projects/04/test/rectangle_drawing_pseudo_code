@@ -1,0 +1,18 @@
+// for(int i = 0; i < n; i++) {
+// 		draw 16 black pixels at the
+//		beginning of row int
+
+addr = SCREEN
+n = RAM[0]
+i = 0
+
+LOOP:
+	if i > n goto END
+	RAM[addr] = -1 // 1111111111111111
+	// advances to the next row
+	addr = addr + 32
+	i = i + 1
+	goto LOOP
+	
+END:
+	goto END
